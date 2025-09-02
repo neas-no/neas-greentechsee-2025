@@ -9,6 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.22",
+    "@heroicons/vue": "^2.1.5",
+    "@ionic/vue": "^8.7.3",
+    "@phosphor-icons/vue": "^2.1.7",
+    "axios": "^1.11.0",
+    "dayjs": "^1.11.13",
+    "highcharts": "^11.4.0",
+    "highcharts-vue": "^2.0.1",
+    "underscore": "^1.13.7",
     "vue": "^3.5.18"
   },
   "devDependencies": {
@@ -19,7 +28,7 @@
     "leaflet": "^1.9.4",
     "postcss": "^8.4.16",
     "sass": "^1.84.0",
-    "tailwindcss": "^3.1.8",
+    "tailwindcss": "^3.4.17",
     "vite": "^5.4.19"
   }
 }
