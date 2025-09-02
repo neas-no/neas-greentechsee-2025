@@ -16,6 +16,7 @@
     "@ionic/vue": "^8.7.3",
     "@phosphor-icons/vue": "^2.1.7",
     "@testing-library/vue": "^8.1.0",
+    "@vitest/coverage-v8": "^3.2.4",
     "axios": "^1.11.0",
     "dayjs": "^1.11.13",
     "highcharts": "^11.4.0",
