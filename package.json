@@ -13,6 +13,7 @@
     "@heroicons/vue": "^2.1.5",
     "@ionic/vue": "^8.7.3",
     "@phosphor-icons/vue": "^2.1.7",
+    "@testing-library/vue": "^8.1.0",
     "axios": "^1.11.0",
     "dayjs": "^1.11.13",
     "highcharts": "^11.4.0",
@@ -24,11 +25,15 @@
     "@tailwindcss/forms": "^0.5.3",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue-leaflet/vue-leaflet": "^0.6.1",
+    "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.11",
+    "jsdom": "^26.1.0",
     "leaflet": "^1.9.4",
     "postcss": "^8.4.16",
     "sass": "^1.84.0",
     "tailwindcss": "^3.4.17",
-    "vite": "^5.4.19"
+    "vite": "^5.4.19",
+    "vitest": "^3.2.4",
+    "vue-tsc": "^3.0.6"
   }
 }
