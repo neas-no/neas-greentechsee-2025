@@ -55,7 +55,7 @@
         </div>
         <div class="hidden sm:block col-span-1 sm:col-span-6">
           <!-- Changed title from "Bestill strøm" to "Bestill internett" -->
-          <p class="mt-2 text-xl sm:text-2xl font-medium text-white text-center">Informasjon om Norgespris</p>
+          <p class="mt-2 text-xl sm:text-2xl font-medium text-white text-center">Norgespris</p>
         </div>
         <div class="hidden sm:block col-span-1 sm:col-span-3">
           <!-- Login button and account dropdown remain unchanged -->
@@ -216,6 +216,68 @@
 
           </div>
 
+
+        <!-- Feedback score -->
+
+                        <!-- Feedback -->
+                <div v-if="!isLoading && !hideFeedback" class="mt-3 mb-2 sm:mb-2 h-full text-base text-white overflow-hidden">
+
+                    <!-- Feedback form -->
+
+                    <div class="col-span-2 ">
+                        <canvas ref="confettiCanvas" class="confetti-canvas"></canvas>
+
+                        <p v-if="!feedbackScoreSubmitted" class="text-base sm:text-lg font-medium">
+                            Hvordan er du fornøyd med dine tjenester fra Neas?
+                        </p>
+
+                        <!-- Rating -->
+                        <div v-if="!feedbackScoreSubmitted" class="mt-2 flex items-center cursor-pointer">
+                            <template v-for="star in 6" :key="star">
+                                <SolidStar
+                                v-if="star <= (hoveredStar || feedbackScore)"
+                                class="w-8 h-8 mr-1 text-yellow-400 hover:text-yellow-500"
+                                @click="!feedbackScoreSubmitted && sendCustomerFeedback(star)"
+                                @mouseover="hoveredStar = star"
+                                @mouseleave="hoveredStar = 0"
+                                />
+                                <OutlineStar
+                                v-else
+                                class="w-8 h-8 mr-1 text-white hover:text-yellow-400"
+                                @click="!feedbackScoreSubmitted && sendCustomerFeedback(star)"
+                                @mouseover="hoveredStar = star"
+                                @mouseleave="hoveredStar = 0"
+                                />
+                            </template>
+                            </div>
+
+
+                        <!-- Thank You Message and feedback form if score is under 4 -->
+                        <div v-if="feedbackScoreSubmitted" class="mt-6">
+                            <p v-if="feedbackScore <= 4" class="text-lg md:text-xl md:font-medium">Takk for din tilbakemelding!</p>
+                            <p v-if="feedbackScore >= 5" class="text-lg md:text-xl md:font-medium">
+                            Takk for din tilbakemelding! <span class="text-red-500">&#10084;</span>
+                            </p>
+                            <p v-if="showFeedbackForm" class="mt-3 text-base sm:text-lg">Send oss gjerne en kommentar:</p>
+
+                            <!-- Feedback form -->
+                            <div v-if="showFeedbackForm" class="mt-1">
+                            <textarea
+                                v-model="feedbackComment"
+                                class="w-full h-40 p-3 border text-base sm:text-lg text-neas-new-green border-gray-300 rounded-md focus:border-neas-new-green focus:ring-neas-new-green"
+                                placeholder="Din tilbakemelding"
+                            ></textarea>
+                            <button
+                                @click="sendCustomerFeedback(this.feedbackScore)"
+                                class="mt-3 mb-6 p-6 flex justify-center rounded-full bg-neas-new-yellow px-4 py-3.5 text-base md:text-lg text-neas-new-green "
+                            >
+                                Send tilbakemelding ->
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
 
         <!-- FAQ  -->
