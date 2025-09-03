@@ -55,7 +55,9 @@
         </div>
         <div class="hidden sm:block col-span-1 sm:col-span-6">
           <!-- Changed title from "Bestill strøm" to "Bestill internett" -->
-          <p class="mt-2 text-xl sm:text-2xl font-medium text-white text-center">Norgespris</p>
+          <p class="mt-2 text-xl sm:text-2xl font-medium text-white text-center">
+            <img src="../assets/Norgespris.png" alt="Norgespris" class="mx-auto h-24 w-25" />
+          </p>
         </div>
         <div class="hidden sm:block col-span-1 sm:col-span-3">
           <!-- Login button and account dropdown remain unchanged -->
