@@ -20,5 +20,9 @@ export default defineConfig({
     watch: {
       ignored: ['**/node_modules/**', '**/fsevents/**']
     }
-  }
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+  },
 })
