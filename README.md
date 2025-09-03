@@ -1,6 +1,7 @@
 # NEAS – GreenTechSee Hackathon 2025
 
-## Project: Norgespris
+## Project: Norgespris 
+## Team: Watt the Hack
 
 This project is NEAS’ contribution to the **GreenTechSee 2025 Hackathon**.  
 It explores the concept of **Norgespris**, a new state-backed alternative to the current Norwegian energy subsidy scheme.  
